@@ -1,26 +1,31 @@
-/* Adjust these later */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
+/* body, nav, h1, h2, h3, p, ul, li {
+    margin: 0px;
+    padding: 0px;
+}*/
 
 body {
+    margin: 0px;
+    padding: 0px;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f2f2f2;
-    color: #333;
+    line-height: 0.1;
+    background-color: #e9e8e8;
+    color: #160963;
 }
 
 header {
-    background-color: #fff;
-    padding: 1rem;
+    background-color: #b2c5bb;
+    color: #000000;
+    padding: 1rem; /* "root element" browser default font size (usually 16px) */
+    margin: 0.5rem;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* horizontal offset, vertical offset, blur radius, colour with opacity */
 }
 
-nav {
-    background-color: #595f43;
-    padding: 1rem;
+nav p {
+    border-radius: 5px;
+    background-color: #888d73;
+    margin: 0px;
+    padding: 1.5rem;
     text-align: center;
 }
 

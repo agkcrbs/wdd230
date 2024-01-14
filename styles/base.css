@@ -14,7 +14,7 @@ body {
 
 header {
     background-color: #b2c5bb;
-    color: #000000;
+    color: #333333;
     padding: 1rem; /* "root element" browser default font size (usually 16px) */
     margin: 0.5rem;
     text-align: center;
@@ -51,9 +51,10 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #333333;
+    color: #ffffff;
     text-align: center;
+    line-height: 1.2;
     padding: 1rem;
     position: fixed;
     bottom: 0;

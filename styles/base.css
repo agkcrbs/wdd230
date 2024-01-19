@@ -13,8 +13,8 @@ body {
 }
 
 header {
-    background-color: #b2c5bb;
-    color: #333333;
+    background-color: #4a534e;
+    color: #ffffff;
     padding: 1rem; /* "root element" browser default font size (usually 16px) */
     margin: 0.5rem;
     text-align: center;
@@ -23,14 +23,14 @@ header {
 
 nav p {
     border-radius: 5px;
-    background-color: #888d73;
+    background-color: #5b5f4a;
     margin: 0px;
     padding: 1.5rem;
     text-align: center;
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     margin: 0 1rem;
 }

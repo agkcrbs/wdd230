@@ -4,50 +4,69 @@
 }*/
 
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Arial', sans-serif;
-    line-height: 0.1;
-    background-color: #e9e8e8;
+    background-color: #c8d1c8;
     color: #160963;
+    margin: 0rem;
+    padding: 0rem;
+    font-family: "Palatino Linotype", Arial, sans-serif;
+    line-height: 0.1;
 }
 
 header {
-    background-color: #4a534e;
-    color: #ffffff;
+    background-color: #a7b9af;
+    color: #000000;
+    /* margin: 0.25rem; */
     padding: 1rem; /* "root element" browser default font size (usually 16px) */
-    margin: 0.5rem;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* horizontal offset, vertical offset, blur radius, colour with opacity */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* horizontal offset, vertical offset, blur radius, colour with opacity */
+}
+
+#profile_image {
+    border-radius: 0.25rem;
+}
+
+nav,
+footer {
+    font-family: "Trajan Pro", Arial, sans-serif;
 }
 
 nav p {
-    border-radius: 5px;
-    background-color: #5b5f4a;
-    margin: 0px;
+    background-color: #4A534E;
+    margin: 0rem;
     padding: 1.5rem;
+    border-radius: 0.5rem;
     text-align: center;
+}
+
+nav p:hover {
+    background-color: #2f3531;
 }
 
 nav a {
     color: #ffffff;
-    text-decoration: none;
-    margin: 0 1rem;
+    margin: 0rem 1rem;
+    text-decoration: none; /*# remove the underline*/
 }
 
-nav a:hover {
+/* nav a:hover {
     text-decoration: underline;
-}
+} */
 
 main {
     padding: 2rem;
 }
 
 .card {
-    background-color: #fff;
-    padding: 1rem;
+    background-color: #ffffff;
     margin-bottom: 1rem;
+    padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    background-color: #c6c4d1;
+    height: 2rem;
 }
 
 footer {

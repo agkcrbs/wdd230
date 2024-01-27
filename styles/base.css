@@ -45,7 +45,7 @@ nav p:hover {
 
 nav a {
     color: #ffffff;
-    margin: 0rem 1rem;
+    margin: 0rem 1rem; /* This doesn't seem to matter. */
     text-decoration: none; /*# remove the underline*/
 }
 
@@ -88,6 +88,6 @@ footer {
     }
 
     nav a {
-        margin: 0.5rem 0;
+        margin: 0rem 0.5rem;
     }
 }

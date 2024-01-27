@@ -1,0 +1,18 @@
+/* CSS */
+#popUp {
+    position: absolute; /* Or fixed. */
+    /* top: 50px; */
+    left: 50px;
+    background-color: white; /* This gets overridden. */
+    border: 1px solid black;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    z-index: 1000; /* Ensure it appears above other content if necessary. */
+    line-height: 1;
+}
+
+#popUp p {
+    color: #FFFFFF;
+    margin: 0.25rem;
+    padding: 0.75rem;
+}

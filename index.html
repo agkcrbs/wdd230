@@ -12,12 +12,14 @@
         <meta property="og:title" content="Steven Foster - WDD 230 - Web Frontend Development" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MjNfMTMz%2FMDAxNjI0NDUxMTg4MTQz.OwWB6KduYL22Z0OIilNo2x_BWkgv8pOA0Bi6eTg4Gkcg.QDj9F36btp0g9yz58Zvcj1vjY0JHRkxaYmE1eIeu6x8g.JPEG.clfeowkdrnstks%2F20210623%25A3%25DF084355.jpg&type=sc960_832" />
-        <meta property="og:url" content="https://agkcrbs.github.io/wdd230/index.html" />
+        <meta property="og:url" content="https://agkcrbs.github.io/wdd230/" />
 
-        <link rel="stylesheet" href="styles/normalize.css">
-        <!-- content delivery network -->
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css"> <!-- Without this type attribute, this error was thrown: "Refused to apply style from 'http://127.0.0.1:5500/styles/normalize.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled." -->
+        <!-- An alternative to hosting your own normalize or reset CSS file is to use a content delivery network (CDN) reference. -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
         <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/popup.css">
     </head>
 
     <body>
@@ -34,7 +36,8 @@
             <a href="chamber/"><p>Chamber</p></a>
             <a href="https://www.byui.edu/"><p>BYU-Idaho</p></a>
             <a href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p36-p37#p36"
-                target="_blank"><p>Scripture</p></a>
+                target="_blank"><p id="navScripture">Scripture</p></a>
+            <div id="popUp" style="display: none;">pop-up content</div>
         </nav>
         <main>
             <h2>WDD 230: Web Frontend Development</h2>
@@ -63,6 +66,7 @@
                 <p>Last Modified: <span id="replaceLastModified">2024/01/13</span></p>
         </footer>
         <script src="scripts/getdates.js"></script>
+        <script src="scripts/popup.js"></script>
     </body>
 
 </html>

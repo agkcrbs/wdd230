@@ -42,6 +42,7 @@ fetch(urlVariable)
         // console.log("This is the log of the desired element:");
         // console.log(desiredElement1); // Log the parsed HTML content
         const desiredElement2 = parsedHTML.querySelector(desiredElementVariable2);
+        const desiredElementTitle = parsedHTML.querySelector("title")
 
         // Here, programmatically remove those footnote superscripts...  They have little IDs attached in the HTML ("marker"), or just use their tag (<sup>).
         // Remove all <sup> elements from the verses.
@@ -55,7 +56,9 @@ fetch(urlVariable)
         // Array-Like Properties: While NodeList is not an array, it has some array-like properties, such as length, which indicates the number of nodes in the list."
         supElements1.forEach(element => element.remove());
         supElements2.forEach(element => element.remove());
-        // Extract the text content from the paragraph
+
+        // Extract the text content from the element(s).
+        const desiredTitle = desiredElementTitle ? desiredElementTitle.textContent.trim() : "Element not found";
         const desiredText1 = desiredElement1 ? desiredElement1.textContent.trim() : "Element not found";
         const desiredText2 = desiredElement2 ? desiredElement2.textContent.trim() : "Element not found";
         // console.log("This is the log of the desired text:");
@@ -66,7 +69,7 @@ fetch(urlVariable)
         const popUp = document.getElementById("popUp");
         // popUp.textContent = `${desiredText1}\n${desiredText2}`; // This doesn't display rightly.
         // const newPopUpPar1 = document.createElement("p"); newPopUpPar1.textContent = desiredText1; popUp.appendChild(newPopUpPar1); // No, no... do this shortlier in one line with .innerHTML.
-        popUp.innerHTML = `<p>${desiredText1}</p><p>${desiredText2}</p>`;
+        popUp.innerHTML = `<p>${desiredTitle}</p><p>${desiredText1}</p><p>${desiredText2}</p>`;
 
         // Show/hide the pop-up on mouseover:
         const navScripture = document.getElementById("navScripture");

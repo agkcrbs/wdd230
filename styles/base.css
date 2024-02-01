@@ -9,7 +9,7 @@ body {
     margin: 0rem;
     padding: 0rem;
     font-family: "Palatino Linotype", Arial, sans-serif;
-    line-height: 0.1;
+    line-height: 1;
 }
 
 header {
@@ -29,6 +29,12 @@ header {
 nav,
 footer {
     font-family: "Trajan Pro", Arial, sans-serif;
+}
+
+nav {
+    margin: 0 auto;
+    margin-left: -40px;
+    line-height: .1;
 }
 
 nav p {
@@ -53,11 +59,21 @@ nav a {
     text-decoration: underline;
 } */
 
+nav ul {
+    list-style-type: none;
+}
+
 main {
     padding: 2rem;
 }
 
+main div {
+    border: 1px solid black;
+}
+
 .card {
+    border: 1px solid black;
+    height: 100%;
     background-color: #ffffff;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -75,7 +91,7 @@ footer {
     text-align: center;
     line-height: 1.2;
     padding: 1rem;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }
@@ -84,7 +100,6 @@ footer {
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        align-items: center;
     }
 
     nav a {

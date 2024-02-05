@@ -77,7 +77,8 @@ fetch(urlVariable)
             popUp.style.display = "block";
         })
         navScripture.addEventListener('mouseout', () => {
-            popUp.setAttribute('style', 'display: none;');
+            // popUp.setAttribute('style', 'display: none;'); // This leaves the in-line property there on mouse-out.
+            popUp.style.removeProperty("display");
         });
     })
     .catch(error => console.error("Error fetching data:", error));

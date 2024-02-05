@@ -63,6 +63,10 @@ nav ul {
     list-style-type: none;
 }
 
+#popUp {
+    display: none;
+}
+
 main {
     padding: 2rem;
 }
@@ -71,6 +75,7 @@ main div {
     border: 1px solid black;
 }
 
+/* These lines put zeros in front of the list. */
 ol {
     list-style-type: none; /* Remove default numbering */
     counter-reset: list-counter;
@@ -83,7 +88,7 @@ counter-increment: list-counter;
 
 .card {
     border: 1px solid black;
-    height: 100%;
+    /* height: 100%; */
     background-color: #ffffff;
     margin-bottom: 1rem;
     padding: 1rem;
@@ -93,6 +98,10 @@ counter-increment: list-counter;
 .card h3 {
     background-color: #c6c4d1;
     height: 2rem;
+}
+
+#bottomCard {
+    width: 95%;
 }
 
 footer {

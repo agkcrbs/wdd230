@@ -71,6 +71,16 @@ main div {
     border: 1px solid black;
 }
 
+ol {
+    list-style-type: none; /* Remove default numbering */
+    counter-reset: list-counter;
+}
+
+ol li::before {
+content: counter(list-counter, decimal-leading-zero);
+counter-increment: list-counter;
+}
+
 .card {
     border: 1px solid black;
     height: 100%;

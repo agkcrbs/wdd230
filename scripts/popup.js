@@ -71,16 +71,32 @@ fetch(urlVariable)
         // const newPopUpPar1 = document.createElement("p"); newPopUpPar1.textContent = desiredText1; popUp.appendChild(newPopUpPar1); // No, no... do this shortlier in one line with .innerHTML.
         popUp.innerHTML = `<p>${desiredTitle}</p><p>${desiredText1}</p><p>${desiredText2}</p>`;
 
-        // Show/hide the pop-up on mouseover:
+        // Show/hide the pop-up on mouseover (make this conditional on viewport size!):
         const navScripture = document.getElementById("navScripture");
-        navScripture.addEventListener("mouseover", () => {
-            // popUp.style.display = "block"; // This shows the display before mouse-over on first pageload...
-            popUp.style.setProperty("display", "block");
-        })
-        navScripture.addEventListener('mouseout', () => {
-            // popUp.setAttribute('style', 'display: none;'); // This leaves the in-line property there on mouse-out.
-            popUp.style.removeProperty("display");
-        });
+        console.log(window.innerWidth);
+        
+        function checkWidthPopUp() {
+            if (window.innerWidth > 768) {
+                navScripture.addEventListener("mouseover", () => {
+                    // popUp.style.display = "block"; // This shows the display before mouse-over on first pageload...
+                    popUp.style.setProperty("display", "block");
+                })
+                navScripture.addEventListener("mouseout", () => {
+                    // popUp.setAttribute('style', 'display: none;'); // This leaves the in-line property there on mouse-out.
+                    popUp.style.removeProperty("display");
+                });
+            } else { // RemoveEventListener may not work; instead, add a reverse-listener.  The mouseout one seems unnecessary.
+                navScripture.addEventListener("mouseover", () => {
+                    popUp.style.removeProperty("display");
+                });
+            };
+        };
+
+        // Call checkWidthPopUp initially to set up the event listener based on the initial viewport size.
+        checkWidthPopUp();
+
+        // Add an event listener for a window-resize event.
+        window.addEventListener("resize", checkWidthPopUp);
     })
     .catch(error => console.error("Error fetching data:", error));
 

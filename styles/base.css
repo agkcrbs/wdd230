@@ -63,6 +63,10 @@ nav ul {
     list-style-type: none;
 }
 
+#menu {
+    display: none;
+}
+
 #popUp {
     display: none;
 }
@@ -118,10 +122,45 @@ footer {
 /* For smaller screens */
 @media (max-width: 768px) {
     nav {
+        display: none;
         flex-direction: column;
     }
 
     nav a {
         margin: 0rem 0.5rem;
+    }
+
+/* Hamburger menu */
+    #menu {
+        display: block;
+        font-family: "Trajan Pro", Arial, sans-serif;
+        background-color: #4A534E;
+        color: #ffffff;
+        margin: 1rem auto;
+        line-height: .1;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        text-align: center;
+    }
+
+    #menu p:hover {
+        background-color: #2f3531;
+    }
+
+    #menu::before {
+        content: "⏬ "; /* "☰"; */
+    }
+
+    #menu.open::before {
+        content: "⏫ "; /* ❎ ⬆️ */
+    }
+
+    /* when the button is clicked - the open class is toggled (added/removed) */
+    nav.open {
+	    display: block;
+    }
+
+    #popUp.open {
+        display: none;
     }
 }

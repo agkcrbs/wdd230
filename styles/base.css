@@ -95,7 +95,7 @@ counter-increment: list-counter;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card h3 {
+.card h3, .card h4 {
     background-color: #c6c4d1;
     height: 2rem;
 }

@@ -74,6 +74,7 @@ fetch(urlVariable)
         // Show/hide the pop-up on mouseover:
         const navScripture = document.getElementById("navScripture");
         navScripture.addEventListener("mouseover", () => {
+            // popUp.style.display = "block"; // This shows the display before mouse-over on first pageload...
             popUp.style.setProperty("display", "block");
         })
         navScripture.addEventListener('mouseout', () => {

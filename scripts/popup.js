@@ -74,7 +74,7 @@ fetch(urlVariable)
         // Show/hide the pop-up on mouseover:
         const navScripture = document.getElementById("navScripture");
         navScripture.addEventListener("mouseover", () => {
-            popUp.style.display = "block";
+            popUp.style.setProperty("display", "block");
         })
         navScripture.addEventListener('mouseout', () => {
             // popUp.setAttribute('style', 'display: none;'); // This leaves the in-line property there on mouse-out.

@@ -24,8 +24,12 @@ fetch("https://api.openweathermap.org/data/2.5/weather?lat=35.8008&lon=127.1039&
         weatherTemperatureElement1.textContent = weatherTemperature1.toFixed(1);
         weatherTemperatureElement2.textContent = weatherTemperature2.toFixed(1);
         weatherDescriptionElement.textContent = weatherDescription;
+        // In case the "feels_like" temperature is the same as "temp", do not say "but".
+        if (weatherTemperature1.toFixed(1) === weatherTemperature2.toFixed(1)) { // These round, so they're the same even if they were different in the hundredth's place.
+            document.querySelector("#conjunction").textContent = "and";
+        }
     })
-    .catch(errorMessage => {
+    .catch(() => { // .catch(errorMessage => {
 		// Report the errors.
         weatherIconElement.alt = "Oh, sorry."; // ${errorMessage}`;
         weatherTemperatureElement1.textContent = "(Temperature unavailable)";

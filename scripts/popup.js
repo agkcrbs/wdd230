@@ -73,7 +73,7 @@ fetch(urlVariable)
 
         // Show/hide the pop-up on mouseover (make this conditional on viewport size!):
         const navScripture = document.getElementById("navScripture");
-        console.log(window.innerWidth);
+        // console.log(`Window width: ${window.innerWidth}`);
         
         function checkWidthPopUp() {
             if (window.innerWidth > 768) {
@@ -99,5 +99,3 @@ fetch(urlVariable)
         window.addEventListener("resize", checkWidthPopUp);
     })
     .catch(error => console.error("Error fetching data:", error));
-
-

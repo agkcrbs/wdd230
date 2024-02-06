@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
+        <!-- For page views. -->
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-K059EY2GXT"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-K059EY2GXT');
+            </script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Steven Foster - WDD 230 - Web Frontend Development</title>
         <meta name="description"
             content="BYU-Idaho WDD 230 - Web Frontend Development course assignment portal for Steven Foster.">
         <meta name="author" content="Steven Foster">
-
         <meta property="og:title" content="Steven Foster - WDD 230 - Web Frontend Development">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MjNfMTMz%2FMDAxNjI0NDUxMTg4MTQz.OwWB6KduYL22Z0OIilNo2x_BWkgv8pOA0Bi6eTg4Gkcg.QDj9F36btp0g9yz58Zvcj1vjY0JHRkxaYmE1eIeu6x8g.JPEG.clfeowkdrnstks%2F20210623%25A3%25DF084355.jpg&type=sc960_832">
         <meta property="og:url" content="https://agkcrbs.github.io/wdd230/">
-
         <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="styles/normalize.css"> <!-- Without this type attribute, this error was thrown: "Refused to apply style from 'http://127.0.0.1:5500/styles/normalize.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled." -->
         <!-- An alternative to hosting your own normalize or reset CSS file is to use a content delivery network (CDN) reference. -->
@@ -22,7 +28,6 @@
         <link rel="stylesheet" href="styles/popup.css">
         <link rel="stylesheet" href="styles/larger.css">
     </head>
-
     <body>
         <header>
             <span><img id="profile_image" src="images/steven_foster_profile.jpg" alt="a picture of a face"
@@ -59,8 +64,10 @@
                 </section>
                 <section class="card">
                     <h3>Information</h3>
-                    <p>Location</p>
-                    <p>Weather</p>
+                    <p>Jeonju, South Korea</p>
+                    <p><img id="weatherIcon" src="http://openweathermap.org/img/wn/01d@2x.png" height="35px" alt="An icon showing the current weather situation.">
+                        (<span id="weatherDescription">How's the weather?</span>)</p>
+                    <p>It's <span id="weatherTemperature1">??</span>° but feels like <span id="weatherTemperature2">??</span>°.</p>
                     <p>Page Visits: </p>
                 </section>
             </div>
@@ -80,6 +87,7 @@
         <script src="scripts/getdates.js"></script>
         <script src="scripts/popup.js"></script>
         <script src="scripts/stackedmenu.js"></script>
+        <!-- Don't overuse this weather API caller.  For that matter, reduce the scripture site requests to once per page-load instead of per mouse-over.-->
+        <script src="scripts/getweather.js"></script>
     </body>
-
 </html>

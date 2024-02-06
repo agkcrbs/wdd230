@@ -1,4 +1,5 @@
 let mapContainerElement = document.querySelector("#mapContainer");
+let buttonJustPushed = false; // Without this mechanism, the map disappears on small-to-small resize.
 
 // Set this again initially, or it will need double-clicks to open it on small 
 // view on the first time, and it will carry its state across resizes.
@@ -14,6 +15,7 @@ function toggleMap() {
     } else {
         mapContainerElement.style.display = "none";
     };
+    buttonJustPushed = true;
 };
 
 document.getElementById("mapToggleButton").addEventListener("click", toggleMap);
@@ -22,8 +24,11 @@ document.getElementById("mapToggleButton").addEventListener("click", toggleMap);
 // Otherwise, it's too hard to remember only the small-view state.
 window.addEventListener("resize", () => {
     if (window.innerWidth >= 768) {
-        mapContainerElement.style.display = "block"
+        mapContainerElement.style.display = "block";
+        buttonJustPushed = false;
     } else {
-        mapContainerElement.style.display = "none";
-    }
+        if (mapContainerElement.style.display === "block" && !buttonJustPushed) {
+            mapContainerElement.style.display = "none";
+        };
+    };
 });

@@ -108,6 +108,14 @@ counter-increment: list-counter;
     width: 95%;
 }
 
+#mapContainer {
+    display: none; /* This changes in larger.css. */
+}
+
+iframe {
+    border: 0;
+}
+
 footer {
     background-color: #333333;
     color: #ffffff;
@@ -120,7 +128,7 @@ footer {
 }
 
 /* For smaller screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     nav {
         display: none;
         flex-direction: column;
@@ -130,7 +138,7 @@ footer {
         margin: 0rem 0.5rem;
     }
 
-/* Hamburger menu */
+    /* Hamburger menu */
     #menu {
         display: block;
         font-family: "Trajan Pro", Arial, sans-serif;
@@ -162,5 +170,9 @@ footer {
 
     #popUp.open {
         display: none;
+    }
+
+    #mapToggleButton {
+        display: inline;
     }
 }

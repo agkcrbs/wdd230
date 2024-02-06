@@ -12,4 +12,12 @@
         display: inline-block;
         width: 45%;
     }
+
+    #mapToggleButton {
+        display: none;
+    }
+
+    #mapContainer {
+        display: block;
+    }
 }

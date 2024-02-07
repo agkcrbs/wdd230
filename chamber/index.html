@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Jeonju Chamber of Commerce - Steven Foster - WDD 230</title>
+        <meta name="description"
+            content="BYU-Idaho WDD 230 - Web Frontend Development Chamber of Commerce site by Steven Foster.">
+        <meta name="author" content="Steven Foster">
+        <meta property="og:title" content="Jeonju Chamber of Commerce - Steven Foster - WDD 230">
+        <meta property="og:type" content="website">
+        <meta property="og:image"
+            content="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MjNfMTMz%2FMDAxNjI0NDUxMTg4MTQz.OwWB6KduYL22Z0OIilNo2x_BWkgv8pOA0Bi6eTg4Gkcg.QDj9F36btp0g9yz58Zvcj1vjY0JHRkxaYmE1eIeu6x8g.JPEG.clfeowkdrnstks%2F20210623%25A3%25DF084355.jpg&type=sc960_832">
+        <meta property="og:url" content="https://agkcrbs.github.io/wdd230/chamber">
+        <link rel="icon" href="chamber\images\favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/base.css">
+        <link rel="stylesheet" href="styles/medium.css">
+        <link rel="stylesheet" href="styles/larger.css">
+    </head>
+    <body>
+        <header>
+            <img id="logo"
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA2MjNfMTMz%2FMDAxNjI0NDUxMTg4MTQz.OwWB6KduYL22Z0OIilNo2x_BWkgv8pOA0Bi6eTg4Gkcg.QDj9F36btp0g9yz58Zvcj1vjY0JHRkxaYmE1eIeu6x8g.JPEG.clfeowkdrnstks%2F20210623%25A3%25DF084355.jpg&type=sc960_832"
+                alt="Jeonju City" height="160" width="126"></span>
+            <div>
+                <h1>Jeonju Chamber of Commerce</h1>
+            </div>
+        </header>
+        <div>
+            <p id="menu">Menu</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">
+                        <p>Home</p>
+                    </a></li>
+                <li><a target="_blank" href="lesson03/chamber-site-plan.html">
+                        <p>Site Plan</p>
+                    </a></li>
+                <li><a href="chamber/">
+                        <p>Chamber</p>
+                    </a></li>
+                <li><a href="https://www.byui.edu/" target="_blank">
+                        <p>BYU-Idaho</p>
+                    </a></li>
+                <li><a target="_blank"
+                        href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p36-p37#p36">
+                        <p id="navScripture">Scripture</p>
+                    </a></li>
+                <li id="popUp">pop-up content</li>
+            </ul>
+        </nav>
+        <main>
+            <h2>WDD 230: Web Frontend Development</h2>
+            <div>
+                <section class="card">
+                    <h3>Learning Activities</h3>
+                    <ol>
+                        <li>: <a target="_blank" href="https://codepen.io/agkcrbs/pen/rNRKOxq">Week 3 - Hamburger Menu
+                                Codepen</a></li>
+                        <li>: <a href="">Media Query (coming soon)</a></li>
+                        <li>: <a href="">Other</a></li>
+                        <li>: ...</li>
+                    </ol>
+                </section>
+                <section class="card">
+                    <h3>Information</h3>
+                    <p>Jeonju, South Korea <button id="mapToggleButton">View Map</button></p>
+                    <p><img id="weatherIcon" src="https://openweathermap.org/img/wn/01d@2x.png" height="35" width="35"
+                            alt="An icon showing the current weather situation.">
+                        (<span id="weatherDescription">How's the weather?</span>)</p>
+                    <p>It's <span id="weatherTemperature1">??</span>° <span id="conjunction">but</span> it feels like
+                        <span id="weatherTemperature2">??</span>°.</p>
+                    <p>Page Visits: </p>
+                </section>
+            </div>
+            <div>
+                <div class="card" id="bottomCard">
+                    <h4>Tools</h4>
+                    <a target="_blank" href="https://byui-cse.github.io/wdd230-course/audit">Coursework Audits</a>
+                </div>
+            </div>
+            <!-- Map within a <figure> element -->
+            <figure id="mapContainer">
+                <!-- Loading="lazy": only loads the content when it comes into view as the user scrolls down the page. -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2287.7655052357686!2d127.14880771027386!3d35.81493032984025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357023601cf26ae5%3A0x1f95dfca67044b31!2z7KCE7KO86rK96riw7KCE!5e0!3m2!1sko!2skr!4v1707246487639!5m2!1sko!2skr"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- Caption for the map -->
+                <figcaption>Gyeonggijeon at Hanok Maeul, Jeonju</figcaption>
+            </figure>
+        </main>
+        <footer>
+            <div>&copy; <span id="replaceCurrentYear">2024</span></div>
+            <div>Steven Foster</div>
+            <div>South Korea</div>
+            <p>Last Modified: <span id="replaceLastModified">2024/01/13</span></p>
+        </footer>
+        <script src="scripts/getdates.js"></script>
+        <script src="scripts/popup.js"></script>
+        <script src="scripts/stackedmenu.js"></script>
+        <!-- Don't overuse this weather API caller.  For that matter, reduce the scripture site requests to once per page-load instead of per mouse-over.-->
+        <script src="scripts/getweather.js"></script>
+        <script src="scripts/togglemap.js"></script>
+    </body>
+
+</html>

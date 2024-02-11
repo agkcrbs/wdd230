@@ -1,5 +1,27 @@
-h1 {
-    display: inline;
+body {
+    font-family: "Rubik", Arial, sans-serif;
+    color: #009933;
+}
+
+header {
+    background-color: #0066cc;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header * {
+    border: 2px solid black;
+}
+
+#logo-box {
+    display: flex;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    font-family: "Miriam Libre", sans-serif;
 }
 
 nav ul li {

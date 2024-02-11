@@ -124,7 +124,7 @@ footer {
     text-align: center;
     line-height: 1.2;
     padding: 1rem;
-    /* position: fixed; */
+    position: fixed;
     bottom: 0;
     width: 100%;
 }

@@ -2,9 +2,10 @@ const inputElement = document.getElementById("favchap");
 const buttonElement = document.querySelector("button");
 const unorderedListElement = document.getElementById("list");
 
+inputElement.focus();
 let addedChapters = [];
 
-buttonElement.addEventListener("click", function () {
+function addChapter() {
     let inputValue = inputElement.value.trim();
     // check to make sure the input is not blank before doing the following remaining tasks in this list using an if block, otherwise provide a message or at least do nothing and return the .focus() to the input field.
     if (inputValue !== "") { // .Trim() removes front and back whitespace -- tabs, newlines.
@@ -44,4 +45,11 @@ buttonElement.addEventListener("click", function () {
         alert("Fatal input error!");
         input.focus();
     }
+};
+
+buttonElement.addEventListener("click", addChapter); // Note: event listeners want the function reference (no parentheses) rather than the function call, which would instead run it on load.
+inputElement.addEventListener("keydown", (keyPressed) => {
+    if (keyPressed.key === 'Enter') {
+        addChapter(); // But this is the function call.
+    };
 });

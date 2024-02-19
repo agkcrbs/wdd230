@@ -71,11 +71,11 @@ nav ul {
 main {
     padding: 2rem;
     padding-top: 1rem;
-    padding-bottom: 9rem;
+    padding-bottom: 6.5rem;
 }
 
 #mainDiv {
-    width: 90%;
+    width: 100%;
     border: 1px solid black;
     margin-bottom: 1rem;
     display: grid;
@@ -83,15 +83,15 @@ main {
     gap: 10px; /* Adjust gap as needed */
     /* display: flex; */
 }
-#leftSection {
-    /* flex: 80%; */
-}
-#rightSection {
-    /* flex: 20%; */
+/* #leftSection {
+    /* flex: 80%;
+}*/
+/*#rightSection {
+    /* flex: 20%;
 
-    /* width: 20%; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow color and opacity as needed */
-}
+    /* width: 20%;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust shadow color and opacity as needed
+}*/
 
 /* These lines put zeros in front of the list. */
 ol {
@@ -121,6 +121,7 @@ ol li::before {
 
 #mapContainer {
     display: none; /* This changes in larger.css. */
+    margin-bottom: -0.5rem;
 }
 
 /* The Google map element. */
@@ -136,10 +137,15 @@ footer {
     color: #ffffff;
     text-align: center;
     line-height: 1.2;
-    padding: 1rem;
+    padding-top: 0.5rem;
+    margin-bottom: -0.5rem;
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+#country {
+    margin-bottom: -0.5rem;
 }
 
 
@@ -201,7 +207,7 @@ footer {
     }
 
     main {
-        padding-bottom: 10rem;
+        padding-bottom: 8rem;
     }
 
     #mainDiv {

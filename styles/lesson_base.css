@@ -67,35 +67,36 @@ nav ul {
     color: #ffffff;
 }
 
-.hiddenNav1, .hiddenNav2, .hiddenNav3, .hiddenNav4, .hiddenNav5,
-.hiddenNav6, .hiddenNav7, .hiddenNav8, .hiddenNav9, .hiddenNav10 {
+#hiddenNav1, #hiddenNav2, #hiddenNav3, #hiddenNav4, #hiddenNav5,
+#hiddenNav6, #hiddenNav7, #hiddenNav8, #hiddenNav9, #hiddenNav10 {
     display: none;
 }
-.hiddenNav1.firstOpen, .hiddenNav2.firstOpen, .hiddenNav3.firstOpen, 
-.hiddenNav4.firstOpen, .hiddenNav5.firstOpen {
-    display: block;
-    position: absolute;
-    left: 42%; /* 34%; */
-    width: 24%; /* 32%; */
-}
-.hiddenNav1.firstOpen { top: 10.75rem; }
-.hiddenNav2.firstOpen { top: 13.95rem; }
-.hiddenNav3.firstOpen { top: 17.2rem; }
-.hiddenNav4.firstOpen { top: 20.45rem; }
-.hiddenNav5.firstOpen { top: 23.7rem; }
 
-.hiddenNav6.secondOpen, .hiddenNav7.secondOpen, .hiddenNav8.secondOpen, 
-.hiddenNav9.secondOpen, .hiddenNav10.secondOpen {
+#hiddenNav1.firstOpen, #hiddenNav2.firstOpen, #hiddenNav3.firstOpen, 
+#hiddenNav4.firstOpen, #hiddenNav5.firstOpen {
     display: block;
     position: absolute;
-    left: 74%; /* 34%; */
-    width: 24%; /* 32%; */
+    left: 46%; /* 34%; */
+    width: 20%; /* 32%; */
 }
-.hiddenNav6.secondOpen { top: 10.75rem; }
-.hiddenNav7.secondOpen { top: 13.95rem; }
-.hiddenNav8.secondOpen { top: 17.2rem; }
-.hiddenNav9.secondOpen { top: 20.45rem; }
-.hiddenNav10.secondOpen { top: 23.7rem; }
+#hiddenNav1.firstOpen { top: 10.75rem; }
+#hiddenNav2.firstOpen { top: 13.95rem; }
+#hiddenNav3.firstOpen { top: 17.2rem; }
+#hiddenNav4.firstOpen { top: 20.45rem; }
+#hiddenNav5.firstOpen { top: 23.7rem; }
+
+#hiddenNav6.secondOpen, #hiddenNav7.secondOpen, #hiddenNav8.secondOpen, 
+#hiddenNav9.secondOpen, #hiddenNav10.secondOpen {
+    display: block;
+    position: absolute;
+    left: 78%; /* 34%; */
+    width: 20%; /* 32%; */
+}
+#hiddenNav6.secondOpen { top: 10.75rem; }
+#hiddenNav7.secondOpen { top: 13.95rem; }
+#hiddenNav8.secondOpen { top: 17.2rem; }
+#hiddenNav9.secondOpen { top: 20.45rem; }
+#hiddenNav10.secondOpen { top: 23.7rem; }
 
 #firstLessonMenu::after, #secondLessonMenu::after {
     content: " 📕";
@@ -215,8 +216,34 @@ footer {
 	    display: block;
     }
 
+    .lessonMenu {
+        width: 64%;
+    }
+
+    #hiddenNav1.firstOpen, #hiddenNav2.firstOpen, #hiddenNav3.firstOpen, 
+    #hiddenNav4.firstOpen, #hiddenNav5.firstOpen {
+        left: 71%;
+        width: 11%;
+    }
+    #hiddenNav1.firstOpen { top: 11.65rem; }
+    #hiddenNav2.firstOpen { top: 14.85rem; }
+    #hiddenNav3.firstOpen { top: 18.1rem; }
+    #hiddenNav4.firstOpen { top: 21.35rem; }
+    #hiddenNav5.firstOpen { top: 24.6rem; }
+
+    #hiddenNav6.secondOpen, #hiddenNav7.secondOpen, #hiddenNav8.secondOpen, 
+    #hiddenNav9.secondOpen, #hiddenNav10.secondOpen {
+        left: 84%;
+        width: 11%;
+    }
+    #hiddenNav6.secondOpen { top: 11.65rem; }
+    #hiddenNav7.secondOpen { top: 14.85rem; }
+    #hiddenNav8.secondOpen { top: 18.1rem; }
+    #hiddenNav9.secondOpen { top: 21.35rem; }
+    #hiddenNav10.secondOpen { top: 24.6rem; }
+
     main.open {
-        margin-top: 15rem;
+        margin-top: 8.5rem;
     }
 
     main {

@@ -22,6 +22,9 @@
     </head>
     <body>
         <header>
+            <div id="small-logo-box">
+                <img src="images/logo-sm.jpg" alt="Jeonju City" height="136" width="204">
+            </div>
             <div id="logo-box">
                 <div id="logo-oval">
                     <img src="images/jeonju.jpg" alt="Jeonju City" height="120" width="95">
@@ -45,21 +48,27 @@ This shorthand notation (T) means "smooth quadratic Bezier curve", where the con
                     <h1 id="h1-second">Chamber of Commerce</h1>
                 </div>
             </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href=""><p>link 1</p></a>
-                        <a><p>link 2</p></a>
-                        <a><p>link 3</p></a>
-                    </li>
-                </ul>
-            </nav>
-            <div id="account-circle">
-                <img id="account" src="images/silhouette1b.jpg" alt="a human-like cartoon silhouette" height="75" width="75">
+            <div id="nav-box">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href=""><p class="nav-button">This 1 Link</p></a>
+                            <a href=""><p class="nav-button">This 2 Link</p></a>
+                            <a href=""><p class="nav-button">This 3 Link</p></a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="account-box">
+                    <div id="account-circle">
+                        <img id="account-image1" src="images/silhouette1b.jpg" alt="a human-like cartoon silhouette" height="75" width="75" onmouseover="hoverOver(this)" onmouseout="hoverOff(this)">
+                        <!-- <img id="account-image2" src="images/silhouette2b.jpg" alt="a human-like cartoon silhouette" height="75" width="75"> -->
+                    </div>
+                    <p id="logIn"><a href="" target_="blank">Log In</a> | <a href="" target_="blank">Sign in</a></p>
+                </div>
             </div>
         </header>
         <!-- <img href="" alt="hero banner"> -->
-        <div id="hero-image-container">real container</div>
+        <div id="hero-image-container"></div>
         <div id="menu">
             <p>Menu</p>
             <nav>
@@ -128,6 +137,8 @@ This shorthand notation (T) means "smooth quadratic Bezier curve", where the con
         <!-- Don't overuse this weather API caller.  For that matter, reduce the scripture site requests to once per page-load instead of per mouse-over.-->
         <script src="scripts/getweather.js"></script>
         <script src="scripts/togglemap.js"></script>
+
+        <script src="scripts/chamber.js"></script>
     </body>
 
 </html>

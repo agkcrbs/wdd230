@@ -1,0 +1,20 @@
+@media screen and (min-width: 769px) {
+    #small-logo-box {
+        display: none;
+    }
+
+    #logo-box {
+        display: flex;
+        align-items: center;
+    }
+
+    #logo-oval {
+        width: 95px;
+        height: 120px;
+        overflow: hidden; /* This masks content outside the container. */
+        border-radius: 50%;
+        margin-left: 1rem;
+        margin-right: -0.5rem;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,24 @@
+@media screen and (min-width: 1080px) {
+    .nav-button {
+        display: inline;
+    }
+
+    /* nav ul li {
+        flex: 1 1 100%;
+        padding: 1px;
+    } */
+
+    /* .card {
+        display: inline-block;
+        width: 45%;
+    }
+
+    #mapToggleButton {
+        display: none;
+    }
+
+    #mapContainer {
+        display: block;
+        margin-bottom: 1rem;
+    } */
+}

@@ -7,9 +7,6 @@ body {
 header {
     /* background-color: #0066cc; /* Solid color for the top; not needed with the gradient spacing below. */
     background-image: linear-gradient(to bottom, rgba(0, 102, 204, 1) 12rem, rgba(0, 102, 204, 0)); /* Opacity gradient; 1 is opaque.  The trailing dimension values are optional.*/
-    /* background-image: linear-gradient(to bottom, rgba(0, 102, 204, 1) 12rem, rgba(0, 102, 204, 0) 16rem), url("https://raw.githubusercontent.com/agkcrbs/wdd230/master/chamber/images/20240217_195443c.webp");*/
-    background-size: cover; /* This stretches the background image size to fit the whole container.  Otherwise, it repeats. */
-    background-position: center; /* This centers the background image within the container. */
     /* height: 300px; */
     position: relative;
     display: flex;
@@ -25,9 +22,14 @@ header {
     border: 2px solid black;
 } */
 
-#logo-box {
+/* Moved to medium.css. */
+/* #logo-box {
     display: flex;
     align-items: center;
+} */
+
+#logo-box {
+    display: none;
 }
 
 #logo-oval {
@@ -38,33 +40,6 @@ header {
     margin-left: 1rem;
     margin-right: -0.5rem;
     z-index: 1;
-}
-
-#account-circle {
-    width: 75px;
-    height: 75px;
-    overflow: hidden; /* This masks content outside the container. */
-    border-radius: 50%;
-    padding-left: 0rem;
-    margin-right: 0rem;
-    z-index: 1;
-}
-
-#account:hover {
-    background-image: url("images/silhouette2b.jpg");
-}
-
-/* #welcome {
-    /*transform: skewY(-10deg); /* This skews text vertically.
-    transform: rotate(-30deg); /* This rotates the text angle; similar to skew.
-}*/
-
-header nav p {
-    display: inline; /* Header, nav, div, a, p -- all block display, inheriting down. */
-}
-
-nav ul li {
-    list-style-type: none;
 }
 
 h1, h2, h3 {
@@ -98,12 +73,77 @@ text {
     text-shadow: -1px -1px 0 #DCFFE7, 1px -1px 0 #DCFFE7, -1px 1px 0 #DCFFE7, 1px 1px 0 #DCFFE7;
 }
 
+/* #welcome {
+    /*transform: skewY(-10deg); /* This skews text vertically.
+    transform: rotate(-30deg); /* This rotates the text angle; similar to skew.
+}*/
+
+header nav p {
+    display: inline; /* Header, nav, div, a, p -- all block display, inheriting down. */
+}
+
+.nav-button {
+    display: block;
+    color: white;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.nav-button {
+    background-color: rgb(86, 140, 224);
+    color: white;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.nav-button:hover {
+    background-color: rgb(105, 157, 241);
+}
+
+nav a {
+    text-decoration: none;
+}
+
+#account-box {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#account-circle {
+    width: 75px;
+    height: 75px;
+    overflow: hidden; /* This masks content outside the container. */
+    border-radius: 50%;
+    padding-left: 0rem;
+    margin-right: 0rem;
+    z-index: 1;
+}
+/* #account-image1 {
+    z-index: 3;
+}
+#account-image1:hover {
+    display: none;
+    z-index: -2;
+}
+#account-image2 {
+    position: absolute;
+    left: 35rem;
+    z-index: 2;
+} */
+
+#logIn {
+    margin-left: -1rem;
+}
+
 #hero-image-container {
-    height: 300px;
+    height: 320px; /* 300px; */
     background-image: url("https://raw.githubusercontent.com/agkcrbs/wdd230/master/chamber/images/20240217_195443c.webp"); /* Only web-hosted URLs; no local option...? */
     background-size: cover; /* This stretches the background image size to fit the whole container.  Otherwise, it repeats. */
     background-position: center; /* This centers the background image within the container. */    
-    margin-top: -4rem;
+    margin-top: -3rem;
 }
 
 #menu {
@@ -111,3 +151,8 @@ text {
 }
 
 
+/* @media screen and (max-width: 768px) {
+    #logo-box {
+        display: none;
+    }
+} */

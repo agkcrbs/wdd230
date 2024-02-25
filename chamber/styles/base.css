@@ -1,37 +1,113 @@
 body {
     font-family: "Rubik", Arial, sans-serif;
     color: #009933;
+    background-color: #d9e6f3;
 }
 
 header {
     /* background-color: #0066cc; /* Solid color for the top; not needed with the gradient spacing below. */
-    background-image: linear-gradient(to bottom, rgba(0, 102, 204, 1) 12rem, rgba(0, 102, 204, 0) 16rem); /* Opacity gradient; 1 is opaque.  The dimension values are optional.*/
-    color: #ffffff;
-    padding: 1rem;
+    background-image: linear-gradient(to bottom, rgba(0, 102, 204, 1) 12rem, rgba(0, 102, 204, 0)); /* Opacity gradient; 1 is opaque.  The trailing dimension values are optional.*/
+    /* background-image: linear-gradient(to bottom, rgba(0, 102, 204, 1) 12rem, rgba(0, 102, 204, 0) 16rem), url("https://raw.githubusercontent.com/agkcrbs/wdd230/master/chamber/images/20240217_195443c.webp");*/
+    background-size: cover; /* This stretches the background image size to fit the whole container.  Otherwise, it repeats. */
+    background-position: center; /* This centers the background image within the container. */
+    /* height: 300px; */
+    position: relative;
+    display: flex;
+    color: #009933;
+    padding: 0.5rem;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* justify-content: space-between; /* This aligns items horizontally, at the start and end of the header. */
+    align-items: center;  /* This aligns items vertically. */
 }
 
-header * {
+/* header * {
     border: 2px solid black;
-}
+} */
 
 #logo-box {
     display: flex;
     align-items: center;
 }
 
-nav ul li {
-    list-style-type: none;
-    border: 1px solid black;
+#logo-oval {
+    width: 95px;
+    height: 120px;
+    overflow: hidden; /* This masks content outside the container. */
+    border-radius: 50%;
+    margin-left: 1rem;
+    margin-right: -0.5rem;
+    z-index: 1;
 }
 
-#hero-image-container {
-    background-image: url("images/20240217_195443c.jpg"); /* Only web-hosted URLs; no local option...? */
-    background-size: cover; /* This adjusts the background image size to cover the whole container. */
-    background-position: center; /* This centers the background image within the container. */
+#account-circle {
+    width: 75px;
+    height: 75px;
+    overflow: hidden; /* This masks content outside the container. */
+    border-radius: 50%;
+    padding-left: 0rem;
+    margin-right: 0rem;
+    z-index: 1;
+}
+
+#account:hover {
+    background-image: url("images/silhouette2b.jpg");
+}
+
+/* #welcome {
+    /*transform: skewY(-10deg); /* This skews text vertically.
+    transform: rotate(-30deg); /* This rotates the text angle; similar to skew.
+}*/
+
+header nav p {
+    display: inline; /* Header, nav, div, a, p -- all block display, inheriting down. */
+}
+
+nav ul li {
+    list-style-type: none;
 }
 
 h1, h2, h3 {
     font-family: "Miriam Libre", Arial, sans-serif;
 }
+
+h1 {
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* This creates a text outline. */
+    position: relative; /* This is used by the blur. */
+    z-index: 2
+    ; /* To keep the text above the blur. */
+}
+#h1-first { margin-bottom: -3rem; }
+#h1-second {
+    margin-top: -2rem;
+    width: 250px;
+}
+
+h1::after {
+    content: ""; /* This is required for pseudo-element...? */
+    background-color: rgba(171, 178, 243, 0.5); /* Color and opacity of the blur. */
+    position: absolute;
+    filter: blur(6px);
+    z-index: -1;
+}
+#h1-first::after { height: 100%; left: 2rem; width: 75%; }
+#h1-second::after { height: 100%; left: 1.5rem; width: 80%; top: 0rem; }
+
+/* Outline for text. */
+text {
+    text-shadow: -1px -1px 0 #DCFFE7, 1px -1px 0 #DCFFE7, -1px 1px 0 #DCFFE7, 1px 1px 0 #DCFFE7;
+}
+
+#hero-image-container {
+    height: 300px;
+    background-image: url("https://raw.githubusercontent.com/agkcrbs/wdd230/master/chamber/images/20240217_195443c.webp"); /* Only web-hosted URLs; no local option...? */
+    background-size: cover; /* This stretches the background image size to fit the whole container.  Otherwise, it repeats. */
+    background-position: center; /* This centers the background image within the container. */    
+    margin-top: -4rem;
+}
+
+#menu {
+    display: none;
+}
+
+

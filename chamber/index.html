@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Jeonju Chamber of Commerce - Steven Foster - WDD 230</title>
+        <title>Jeonju City Chamber of Commerce - Steven Foster - WDD 230</title>
         <meta name="description"
             content="BYU-Idaho WDD 230 - Web Frontend Development Chamber of Commerce site by Steven Foster.">
         <meta name="author" content="Steven Foster">
-        <meta property="og:title" content="Jeonju Chamber of Commerce - Steven Foster - WDD 230">
+        <meta property="og:title" content="Jeonju City Chamber of Commerce - Steven Foster - WDD 230">
         <meta property="og:type" content="website">
         <meta property="og:image" content="https://agkcrbs.github.io/wdd230/images/jeonju.jpg">
         <meta property="og:url" content="https://agkcrbs.github.io/wdd230/chamber">
@@ -18,54 +18,74 @@
         <link rel="stylesheet" href="styles/larger.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap">
     </head>
     <body>
         <header>
             <div id="logo-box">
-                <img id="logo" src="images/jeonju.jpg" alt="Jeonju City" height="120" width="95">
+                <div id="logo-oval">
+                    <img src="images/jeonju.jpg" alt="Jeonju City" height="120" width="95">
+                </div>
                 <div>
-                    <h1>Jeonju</h1><br>
-                    <h1>Chamber of Commerce</h1>
+                    <h1 id="h1-first">Jeonju City</h1><br>
+                    <p id="welcome" hidden>Welcome!</p>
+                    <svg width="200" height="100"> <!-- If the text exceeds either these dimensions, or the data points below, it's not shown. -->
+                        <path id="curved-text" d="M 40,80 Q 120,45 200,60" fill="transparent" />
+<!-- Notes on svg path data:
+d="M 10,80 Q 100,10 200,80 T 390,80" defines a quadratic Bezier curve (also known as a "quadratic curve").
+M 10,80: Move to the point (10, 80) without drawing anything. This is the starting point of the path.
+Q 100,10 200,80: Draw a quadratic Bezier curve from the current point to the point (200, 80), with the control point (100, 10).
+The control point influences the shape and direction of the curve.
+T 390,80: Draw a quadratic Bezier curve from the current point to the point (390, 80), using a control point that reflects the previous control point (100, 10) but mirrored.
+This shorthand notation (T) means "smooth quadratic Bezier curve", where the control point is inferred based on the reflection of the previous control point. -->
+                        <text font-family="Protest Revolution" font-size="35" font-weight="bold" fill="rgb(0, 153, 51)">
+                            <textPath xlink:href="#curved-text">Welcome!</textPath>
+                        </text>
+                    </svg>
+                    <h1 id="h1-second">Chamber of Commerce</h1>
                 </div>
             </div>
             <nav>
                 <ul>
                     <li>
-                        <a>link 1</a>
-                        <a>link 2</a>
-                        <a>link 3</a>
+                        <a href=""><p>link 1</p></a>
+                        <a><p>link 2</p></a>
+                        <a><p>link 3</p></a>
                     </li>
                 </ul>
             </nav>
+            <div id="account-circle">
+                <img id="account" src="images/silhouette1b.jpg" alt="a human-like cartoon silhouette" height="75" width="75">
+            </div>
         </header>
-        <div>
-            <p id="menu">Menu</p>
+        <!-- <img href="" alt="hero banner"> -->
+        <div id="hero-image-container">real container</div>
+        <div id="menu">
+            <p>Menu</p>
+            <nav>
+                <ul>
+                    <li><a href="#">
+                            <p>Home</p>
+                        </a></li>
+                    <li><a target="_blank" href="lesson03/chamber-site-plan.html">
+                            <p>Site Plan</p>
+                        </a></li>
+                    <li><a href="chamber/">
+                            <p>Chamber</p>
+                        </a></li>
+                    <li><a href="https://www.byui.edu/" target="_blank">
+                            <p>BYU-Idaho</p>
+                        </a></li>
+                    <li><a target="_blank"
+                            href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p36-p37#p36">
+                            <p id="navScripture">Scripture</p>
+                        </a></li>
+                    <li id="popUp">pop-up content</li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">
-                        <p>Home</p>
-                    </a></li>
-                <li><a target="_blank" href="lesson03/chamber-site-plan.html">
-                        <p>Site Plan</p>
-                    </a></li>
-                <li><a href="chamber/">
-                        <p>Chamber</p>
-                    </a></li>
-                <li><a href="https://www.byui.edu/" target="_blank">
-                        <p>BYU-Idaho</p>
-                    </a></li>
-                <li><a target="_blank"
-                        href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng&id=p36-p37#p36">
-                        <p id="navScripture">Scripture</p>
-                    </a></li>
-                <li id="popUp">pop-up content</li>
-            </ul>
-        </nav>
         <main>
-            <div id="hero-image-container">image container</div>
-            <!-- <img href="" alt="hero banner"> -->
-            <h2>Jeonju Chamber of Commerce</h2>    
+            <h2>Jeonju City Chamber of Commerce</h2>    
             <div>
                 <section class="card">
                     <h3>Section 1</h3>

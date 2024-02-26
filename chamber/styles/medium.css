@@ -1,4 +1,4 @@
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) and (max-width: 1079px) {
     #small-logo-box {
         display: none;
     }
@@ -16,5 +16,18 @@
         margin-left: 1rem;
         margin-right: -0.5rem;
         z-index: 1;
+    }
+
+    #nav-box {
+        margin-left: -3rem;
+        margin-right: 5rem;
+        width: 40%;
+    }
+
+    .nav-button{
+        display: inline-flex;
+        margin: 1rem auto;
+        width: 40%;
+        justify-content: center;
     }
 }

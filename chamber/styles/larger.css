@@ -1,24 +1,35 @@
 @media screen and (min-width: 1080px) {
-    .nav-button {
-        display: inline;
-    }
-
-    /* nav ul li {
-        flex: 1 1 100%;
-        padding: 1px;
-    } */
-
-    /* .card {
-        display: inline-block;
-        width: 45%;
-    }
-
-    #mapToggleButton {
+    #small-logo-box {
         display: none;
     }
 
-    #mapContainer {
-        display: block;
-        margin-bottom: 1rem;
-    } */
+    #logo-box {
+        display: flex;
+        align-items: center;
+    }
+
+    #logo-oval {
+        width: 95px;
+        height: 120px;
+        overflow: hidden; /* This masks content outside the container. */
+        border-radius: 50%;
+        margin-left: 1rem;
+        margin-right: -0.5rem;
+        z-index: 1;
+    }
+
+    #nav-box {
+        margin-left: -3rem;
+        margin-right: 8rem;
+        width: 100%;
+    }
+
+    .nav-button {
+        display: inline-flex;
+        width: 20%;
+        height: 2rem;
+        margin: 1rem auto;
+        justify-content: center;
+        align-items: center;
+    }
 }

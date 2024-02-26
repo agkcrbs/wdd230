@@ -7,26 +7,13 @@ body {
 header {
     /* background-color: #0066cc; /* Solid color for the top; not needed with the gradient spacing below. */
     background-image: linear-gradient(to bottom, rgba(0, 102, 204, 1) 12rem, rgba(0, 102, 204, 0)); /* Opacity gradient; 1 is opaque.  The trailing dimension values are optional.*/
-    /* height: 300px; */
     position: relative;
     display: flex;
     color: #009933;
-    padding: 0.5rem;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* justify-content: space-between; /* This aligns items horizontally, at the start and end of the header. */
     align-items: center;  /* This aligns items vertically. */
 }
-
-/* header * {
-    border: 2px solid black;
-} */
-
-/* Moved to medium.css. */
-/* #logo-box {
-    display: flex;
-    align-items: center;
-} */
 
 #logo-box {
     display: none;
@@ -85,6 +72,8 @@ header nav p {
 .nav-button {
     display: block;
     color: white;
+    border: 1px solid #009933;
+    border-radius: 5px;
 }
 
 nav ul li {
@@ -100,6 +89,7 @@ nav ul li {
 
 .nav-button:hover {
     background-color: rgb(105, 157, 241);
+    border: 1px solid white;
 }
 
 nav a {
@@ -121,18 +111,6 @@ nav a {
     margin-right: 0rem;
     z-index: 1;
 }
-/* #account-image1 {
-    z-index: 3;
-}
-#account-image1:hover {
-    display: none;
-    z-index: -2;
-}
-#account-image2 {
-    position: absolute;
-    left: 35rem;
-    z-index: 2;
-} */
 
 #logIn {
     margin-left: -1rem;
@@ -151,8 +129,15 @@ nav a {
 }
 
 
-/* @media screen and (max-width: 768px) {
-    #logo-box {
-        display: none;
+@media screen and (max-width: 540px) {
+    #nav-box {
+        margin-left: -3.5rem;
+        width: 12rem;
     }
-} */
+
+    .nav-button{
+        width: 2rem;
+        font-size: 0.7rem;
+        display: inline-flex;
+    }
+}
